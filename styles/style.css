@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+.page {
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.content {
+  margin: auto;
+  min-width: 1140px;
+  display: grid;
+  grid-template-columns: auto 35%;
+  gap: 30px;
+  padding: 133px 30px;
+}
+
+/*СЕКЦИЯ С ВИДЕО И ПОИСКОМ*/
+
+.result {
+  display: grid;
+  grid-template-rows: auto 10%;
+  gap: 16px;
+}
+
+.result__video-container {
+  display: flex;
+  position: relative;
+  margin-top: 11%;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 31.8% auto 27.2%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  font-weight: 400;
+  gap: 5px;
+}
+
+.search-form__fieldset:nth-child(2) {
+  padding: 0px 40px 5px 40px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.search-form__textfield {
+  font-family: inherit;
+  color: inherit;
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+  height: 22px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 13px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+}
+
+.search-form__label-text {
+  display: flex;
+}
+
+.button {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #fff;
+  background-color: transparent;
+  height: 34px;
+}
+
+.search-form__submit-button {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.search-form__checkbox-list .search-form__label {
+  padding: 0px 1px;
+}
+
+/*СЕКЦИЯ С ЗАГОЛОВКОМ И РЕЗУЛЬТАТОМ ПОИСКА*/
+
+.content__details {
+  display: grid;
+  grid-template-rows: auto 60%;
+  gap: 26px;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-height: 298px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.content__accent {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content__card-link_current .content__video-card {
+  background: #545050;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2px 2px;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-thumbnail,
+.button,
+.content__list-item,
+.result__video {
+  width: 100%;
+}
+
+.button {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/*СТАТУСЫ ЭЛЕМЕНТОВ*/
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+.search-form__textfield:active {
+  border: none;
+  outline: 1px solid #fff;
+}
+
+input[type="checkbox"]:active + .search-form__pseudo-checkbox {
+  border: none;
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content__video-card:active {
+  background: #545050;
+}
+
+.search-form__checkbox-list .search-form__label:hover, button:hover, .content__video-card:hover {
+  text-decoration: underline;
+  text-decoration-thickness: initial;
+}
+
+input[type="checkbox"]:disabled + .search-form__pseudo-checkbox {
+  border: none;
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+  border: none;
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:focus-visible {
+  outline: none;
+}
+
+.content__list-item:has(.content__card-link:focus-visible) {
+  outline-offset: -2px;
+  outline: 1px solid #fff;
+}
+
+.more-button:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+.visually-hidden { 
+  position: absolute; /* элемент вырывают из потока */ 
+  width: 1px; /* делают элемент очень маленьким, но таким, чтобы не пропал совсем */ 
+  height: 1px; 
+  margin: -1px; /* элемент убирают из поля зрения, сдвинув на размер самого себя */ 
+  padding: 0; /* обнуляют отступы, они есть у некоторых элементов по умолчанию */ 
+  border: 0; /* убирают границу, она тоже может быть у каких-то элементов */ 
+  clip: rect(0 0 0 0); /* это свойство обрезает видимую область до нулевого значения */ 
+  overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */ 
+}
+
+/* ПРОЧЕЕ */
+
+.error__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
