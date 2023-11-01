@@ -11,6 +11,7 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
+  display: flex;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -43,7 +44,6 @@ ol {
   display: grid;
   grid-template-columns: auto 35%;
   gap: 30px;
-  padding: 133px 30px;
 }
 
 /*СЕКЦИЯ С ВИДЕО И ПОИСКОМ*/
