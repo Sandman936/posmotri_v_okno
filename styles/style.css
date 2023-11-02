@@ -63,9 +63,9 @@ ol {
 }
 
 .result__video {
+  width: 100%;
   object-fit: cover;
   object-position: center;
-  height: 100%;
 }
 
 .search-form {
@@ -136,11 +136,13 @@ ol {
 
 .button {
   color: #FFF;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   border: 1px solid #fff;
   background-color: transparent;
   height: 34px;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -172,14 +174,17 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   max-height: 298px;
   position: relative;
   overflow-y: auto;
 }
 
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .content__accent {
-  color: rgba(255, 255, 255, 0.70);
+  color: #545050;
 }
 
 .content__card-link {
@@ -224,24 +229,15 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  min-width: 194px;
   height: 103px;
+  object-fit: cover;
 }
 
 .content__video-card-thumbnail,
 .button,
-.content__list-item,
-.result__video {
+.content__list-item {
   width: 100%;
-}
-
-.button {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  cursor: pointer;
 }
 
 /*СТАТУСЫ ЭЛЕМЕНТОВ*/
