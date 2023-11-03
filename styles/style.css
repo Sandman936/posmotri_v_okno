@@ -199,7 +199,7 @@ ol {
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 51% 49%;
+  grid-template-columns: 52.5% 47.5%;
   padding: 2px 2px;
 }
 
