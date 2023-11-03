@@ -174,9 +174,10 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  max-height: 298px;
+  height: 298px;
+  width: 399px;
   position: relative;
-  overflow-y: auto;
+  overflow: hidden auto;
 }
 
 .content__list-item:not(:last-child) {
@@ -198,7 +199,7 @@ ol {
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 49% 51%;
+  grid-template-columns: 51% 49%;
   padding: 2px 2px;
 }
 
@@ -232,6 +233,7 @@ ol {
   min-width: 194px;
   height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-thumbnail,
